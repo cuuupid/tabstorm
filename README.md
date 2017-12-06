@@ -1,1 +1,3 @@
 # TabStorm
+
+`npm start`
