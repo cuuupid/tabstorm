@@ -4,7 +4,8 @@
   "description": "Collaborate in realtime",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js", "start": "node index.js"
+    "test": "node index.js",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/pshah123/tabstorm/issues"
   },
-  "homepage": "https://github.com/pshah123/tabstorm#readme"
+  "homepage": "https://github.com/pshah123/tabstorm#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "socket.io": "^2.0.4"
+  }
 }
