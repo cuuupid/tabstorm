@@ -12,16 +12,10 @@ app.get('/', (q, s) => {
     serveFile('/index.html', s)
 })
 
-app.get('/emoji.js', (q, s) => {
-    serveFile('/emoji.js', s)
-})
-
-app.get('/emoji.css', (q, s) => {
-    serveFile('/emoji.css', s)
-})
-
-app.get('/style.css', (q, s) => {
-    serveFile('/style.css', s)
+app.get('/:room', (q, s) => {
+    let r = q.params["room"]
+    if (r.indexOf('.js') > -1 || r.indexOf('.css') > -1) serveFile('/'+r, s)
+    else serveFile('/room.html', s)
 })
 
 app.get('/emoji-data/sheet_apple_64.png', (q, s) => {
@@ -50,6 +44,14 @@ io.on('connection', (skt) => {
     skt.on('change', (c) => {
         if (c.op.origin == '+input' || c.op.origin == 'paste' || c.op.origin == '+delete')
             io.to(c.room).emit('change', c)
+    })
+    skt.on('disconnected', (s) => {
+        console.log(s.room +"/"+s.sender+" disconnected.")
+        io.to(s.room).emit('chat message', {
+            sender: 'white',
+            text: s.sender+' has left the room',
+            room: s.room
+        })
     })
 })
 
