@@ -28,6 +28,10 @@ app.get('/emoji-data/sheet_apple_64.png', (q, s) => {
     serveFile('/emoji-data/sheet_apple_64.png', s)
 })
 
+app.get('/favicon.ico', (q, s) => {
+    serveFile('/favicon.ico', s)
+})
+
 var secret = ['turquoise', 'coral', 'tan', 'gold'];
 
 io.on('connection', (skt) => {
