@@ -33,7 +33,7 @@
 		 * @type {object}
 		 */
 		self.img_sets = {
-			'apple' : {'path' : '/emoji-data/img-apple-64/', 'sheet' : '/emoji-data/sheet_apple_64.png', 'sheet_size' : 64, 'mask' : 1},
+			'apple' : {'path' : '/emoji-data/img-apple-64/', 'sheet' : 'https://www.github.com/pshah123/tabstorm/raw/master/emoji-data/sheet_apple_64.png', 'sheet_size' : 64, 'mask' : 1},
 			'google' : {'path' : '/emoji-data/img-google-64/', 'sheet' : '/emoji-data/sheet_google_64.png', 'sheet_size' : 64, 'mask' : 2},
 			'twitter' : {'path' : '/emoji-data/img-twitter-64/', 'sheet' : '/emoji-data/sheet_twitter_64.png', 'sheet_size' : 64, 'mask' : 4},
 			'emojione' : {'path' : '/emoji-data/img-emojione-64/', 'sheet' : '/emoji-data/sheet_emojione_64.png', 'sheet_size' : 64, 'mask' : 8},
