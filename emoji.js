@@ -36,7 +36,7 @@
 		self.img_sets = {
 			'apple': {
 				'path': '			https://github.com/iamcal/emoji-data/raw/340e3b897f71ca985ceccbd6b753e37776734f26/img-apple-64/',
-				'sheet': '/emoji-data/sheet_apple_64.png',
+				'sheet': 'https://github.com/iamcal/emoji-data/raw/sheet_apple_64.png',
 				'sheet_size': 64,
 				'mask': 1
 			},
