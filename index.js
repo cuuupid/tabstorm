@@ -4,8 +4,28 @@ var io = require('socket.io')(http);
 var port = process.env.PORT || 3000;
 var clients = 0;
 
+let serveFile = (f, s) => {
+    s.sendFile(__dirname + f)
+}
+
 app.get('/', (q, s) => {
-    s.sendFile(__dirname + '/index.html')
+    serveFile('/index.html', s)
+})
+
+app.get('/emoji.js', (q, s) => {
+    serveFile('/emoji.js', s)
+})
+
+app.get('/emoji.css', (q, s) => {
+    serveFile('/emoji.css', s)
+})
+
+app.get('/style.css', (q, s) => {
+    serveFile('/style.css', s)
+})
+
+app.get('/emoji-data/sheet_apple_64.png', (q, s) => {
+    serveFile('/emoji-data/sheet_apple_64.png', s)
 })
 
 var secret = ['turquoise', 'coral', 'tan', 'gold'];
