@@ -67,11 +67,11 @@
     var secrets = ['turquoise', 'coral', 'tan', 'gold']
     let url = window.location.href.split('/')
     window.room = url[url.length - 1]
-    document.title = "TabStorm | "+room
+    document.title = "TabStorm | " + room
     console.log("Created socket.")
 
     function newMsg(m) {
-      if (!document.hidden) document.title = "TabStorm | "+room; return;
+      if (!document.hidden) return;
       if (m.sender == 'white') {
         if (m.text.indexOf(secret) > -1) return;
         document.title = m.text
@@ -137,12 +137,11 @@
 
     $(window).load(function () {
       $messages.mCustomScrollbar();
-      updateScrollbar()
     })
 
-    window.onmouseenter = () => {
-      document.title = "TabStorm | "+room
-      updateScrollbar()
+    document.body.onmouseenter = () => {
+      document.title = "TabStorm | " + room
+      $('.chat').scrollTop(1E10)
       return;
     }
 
