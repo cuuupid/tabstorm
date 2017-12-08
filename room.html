@@ -141,6 +141,7 @@
 
     document.body.onmouseenter = () => {
       document.title = "TabStorm | " + room
+      updateScrollbar()
       $('.chat').scrollTop(1E10)
       return;
     }
