@@ -142,7 +142,6 @@
     document.body.onmouseenter = () => {
       document.title = "TabStorm | " + room
       updateScrollbar()
-      $('.chat').scrollTop(1E10)
       return;
     }
 
@@ -278,7 +277,6 @@
             '.mCSB_container')).addClass('new');
         setDate();
         updateScrollbar();
-        $('.chat').scrollTop(1E10)
       }, 1000 + (Math.random() * 2000));
 
     }
