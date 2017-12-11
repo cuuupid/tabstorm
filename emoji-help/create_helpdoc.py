@@ -19,7 +19,7 @@ def chunks(l, n):
         yield ' | '.join(l[i:i + n])
 
 
-md_table = ' | '.join(['Colon Code | Emoji'] * 5) + '\n' + \
-    ' | '.join(['--- | ---'] * 5) + '\n' + '\n'.join(list(chunks(_out, 5)))
+md_table = ' | '.join(['Colon Code | Emoji'] * 4) + '\n' + \
+    ' | '.join(['--- | ---'] * 4) + '\n' + '\n'.join(list(chunks(_out, 4)))
 with open('README.md', 'w') as f:
     f.write(md_table)
